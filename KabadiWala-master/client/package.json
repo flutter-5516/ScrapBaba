@@ -1,12 +1,16 @@
 {
+  "homepage": "https://flutter-5516.github.io/KabadiWala",
   "name": "kabadiwala",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "start": "react-sprits",
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
