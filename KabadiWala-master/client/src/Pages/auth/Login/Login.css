@@ -1,0 +1,163 @@
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-color: #f4f9f4;
+}
+
+.login-box {
+  width: 24rem; 
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 128, 0, 0.2); 
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.login-box:hover {
+  transform: translateY(-5px); 
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2f855a; 
+  margin-bottom: 1rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem; 
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #2f855a; 
+  margin-bottom: 0.5rem;
+}
+
+.input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.25rem;
+  background-color: transparent;
+  border: 2px solid #e2e8f0; 
+  border-radius: 0.5rem;
+  color: #2f855a; 
+  transition: border 0.3s ease;
+
+  &:focus {
+    outline: none;
+    border-color: #38a169; 
+    box-shadow: 0 0 0 3px rgba(56, 161, 105, 0.2);
+  }
+}
+
+.error-message {
+  color: #e53e3e; 
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #38a169;
+  color: white;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+
+  &:hover {
+    background-color: #2f855a;
+    box-shadow: 0 4px 6px rgba(0, 128, 0, 0.3);
+  }
+
+  &.disabled {
+    background-color: #d1d5db; 
+    cursor: not-allowed;
+  }
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.separator-line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: #e2e8f0;
+}
+
+.separator-text {
+  margin: 0 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #38a169; 
+}
+
+.google-signin-button {
+  width: 100%;
+  padding: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 0.5rem;
+  background-color: transparent;
+  color: #38a169; 
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+
+  &:hover {
+    background-color: #f0fff4; 
+    box-shadow: 0 4px 6px rgba(56, 161, 105, 0.3);
+  }
+
+  svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .login-box {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  .title {
+    font-size: 1.25rem;
+  }
+
+  .input,
+  .submit-button,
+  .google-signin-button {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-box {
+    width: 95%;
+    padding: 1.5rem;
+  }
+}

@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap");
+
+/* hide the default scrollbar */
+body::-webkit-scrollbar {
+  width: 0px;
+}
+
+:root {
+  --light-green: #9ef13a;
+  --dark-green: #6db120;
+  --yellow: #d0b965;
+  --dark-grey: #505050;
+  --white: #fff;
+  --black: #1f1f1f;
+  --orange: #ffa500;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--light-grey);
+}
+
+button {
+  outline: none;
+}
+input {
+  outline: none;
+  border-radius: 10px;
+  border: none;
+}
+
+a {
+  color: var(--black);
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h4,
+h6 {
+  color: var(--black);
+}
+
+p {
+  color: var(--dark-grey);
+}
+
+/* Heading */
+
+.heading {
+  text-align: center;
+  font-size: 42px;
+  color: var(--dark-green);
+}
+
+@media (max-width: 1700px) {
+  .heading {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .heading {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .heading {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 700px) {
+  .heading {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 500px) {
+  .heading {
+    font-size: 30px;
+  }
+}
+
+/* Button */
+.button {
+  font-size: 18px;
+  background-color: var(--dark-green);
+  padding: 12px 20px;
+  border-radius: 12px;
+  color: white;
+  transition: 0.2s;
+  cursor: pointer;
+  border: 2px solid var(--dark-green);
+}
+.button:hover {
+  background-color: white;
+  color: var(--dark-green);
+  border: 2px solid var(--dark-green);
+}
+
+@media (max-width: 1400px) {
+  .button {
+    font-size: 16px;
+    padding: 10px 18px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .button {
+    font-size: 15px;
+    padding: 9px 16px;
+  }
+}
+
+@media (max-width: 500px) {
+  .button {
+    font-size: 14px;
+    padding: 9px 16px;
+  }
+}
+
+
+
+/* Gap */
+
+.gap{
+  margin-bottom: 160px ;
+}
+
+@media(max-width:1700px){
+  .gap{
+  margin-bottom: 140px ;
+}
+}
+
+
+
+@media(max-width:1400px){
+  .gap{
+  margin-bottom: 120px ;
+}
+}
+
+@media(max-width:1000px){
+  .gap{
+  margin-bottom: 100px ;
+}
+}
+
+@media(max-width:700px){
+  .gap{
+  margin-bottom: 80px ;
+}
+}
+
+

@@ -1,0 +1,112 @@
+/* Full Page Container */
+.about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  min-height: 100vh;
+  background-color: #f4f4f4; /* General background color */
+  box-sizing: border-box;
+}
+
+/* Main Content Area */
+.about-content {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1200px; /* Increased width to cover more of the page */
+  background-color: white; /* Background applied only to content area */
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  padding: 40px; /* Increased padding for better spacing */
+}
+
+/* Left Side - Text Section */
+.about-text {
+  flex: 3; /* Give more space to the text */
+  padding: 30px;
+  text-align: left;
+}
+
+.about-text h1 {
+  font-size: 3rem; /* Increased heading size */
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.about-text p {
+  font-size: 1.2rem; /* Increased font size for better readability */
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+/* Right Side - Image Section */
+.about-image {
+  flex: 2; /* Give less space to the image */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 400px; /* Set a max size for the image */
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Hover Effect for Content */
+.about-content:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column; /* Stack content vertically */
+    max-width: 90%; /* Reduce width for tablets */
+  }
+
+  .about-image img {
+    max-width: 100%; /* Allow image to scale */
+    height: auto;
+  }
+
+  .about-text {
+    text-align: center; /* Center-align text */
+    padding: 20px;
+  }
+
+  .about-text h1 {
+    font-size: 2.2rem; /* Adjust heading size */
+  }
+
+  .about-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-content {
+    padding: 20px; /* Reduce padding for smaller screens */
+  }
+
+  .about-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .about-text p {
+    font-size: 0.95rem;
+  }
+
+  .about-image {
+    padding: 10px;
+  }
+}

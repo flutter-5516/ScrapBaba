@@ -1,0 +1,289 @@
+.services {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 60px;
+  padding: 40px 0;
+
+  h4 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 10px;
+    color: var(--text-color);
+    font-weight: 600;
+  }
+
+  .filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+  }
+
+  .filter-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    h2 {
+      cursor: pointer;
+      background-color: white;
+      color: var(--dark-green);
+      padding: 12px 20px;
+      border-radius: 12px;
+      font-size: 1.25rem;
+      font-weight: 500;
+      border: 1px solid var(--dark-green);
+      transition: all 0.3s ease;
+      text-align: center;
+
+      &:hover,
+      &:focus {
+        background-color: var(--dark-green);
+        color: white;
+        outline: none;
+        transform: scale(1.05);
+      }
+    }
+
+    h2.active {
+      background-color: var(--dark-green);
+      color: white;
+    }
+  }
+
+  .filter-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 40px;
+    width: 100%;
+
+    .filter-card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 450px;
+      gap: 20px;
+      box-shadow: 0px 10px 32px -5px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      border-radius: 15px;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
+
+      &:hover {
+        transform: translateY(-8px);
+        box-shadow: 0px 20px 50px -10px rgba(0, 0, 0, 0.2);
+      }
+
+      img {
+        width: 70px;
+        height: auto;
+        transition: transform 0.2s ease;
+      }
+
+      .content {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+
+        h4 {
+          font-size: 1.125rem;
+          font-weight: 600;
+          color: var(--heading-color);
+        }
+
+        p {
+          font-size: 1rem;
+          line-height: 1.6;
+          letter-spacing: 0.5px;
+          color: var(--text-color);
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 1700px) {
+  .services {
+    gap: 50px;
+    h4 {
+      font-size: 1.25rem;
+    }
+
+    .filter-btn {
+      gap: 20px;
+      h2 {
+        padding: 10px 18px;
+        font-size: 1.125rem;
+      }
+    }
+
+    .filter-cards {
+      gap: 30px;
+
+      .filter-card {
+        width: 400px;
+        gap: 18px;
+        padding: 15px 20px;
+
+        img {
+          width: 60px;
+        }
+
+        .content {
+          gap: 10px;
+
+          h4 {
+            font-size: 1.125rem;
+          }
+
+          p {
+            font-size: 0.95rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1500px) {
+  .services {
+    gap: 45px;
+    h4 {
+      font-size: 1.125rem;
+    }
+
+    .filter-btn {
+      gap: 18px;
+      h2 {
+        padding: 8px 16px;
+        font-size: 1rem;
+      }
+    }
+
+    .filter-cards {
+      gap: 25px;
+
+      .filter-card {
+        width: 360px;
+        gap: 16px;
+        padding: 14px 18px;
+
+        img {
+          width: 55px;
+        }
+
+        .content {
+          gap: 8px;
+
+          h4 {
+            font-size: 1rem;
+          }
+
+          p {
+            font-size: 0.875rem;
+            line-height: 1.5;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .services {
+    gap: 40px;
+    h4 {
+      font-size: 1rem;
+    }
+
+    .filter-btn {
+      gap: 16px;
+      h2 {
+        padding: 8px 16px;
+        font-size: 0.9375rem;
+      }
+    }
+
+    .filter-cards {
+      gap: 20px;
+
+      .filter-card {
+        width: 320px;
+        gap: 14px;
+        padding: 12px 16px;
+
+        img {
+          width: 50px;
+        }
+
+        .content {
+          gap: 8px;
+
+          h4 {
+            font-size: 0.95rem;
+          }
+
+          p {
+            font-size: 0.8125rem;
+            line-height: 1.4;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .services {
+    gap: 35px;
+    h4 {
+      font-size: 0.875rem;
+    }
+
+    .filter-btn {
+      gap: 14px;
+      h2 {
+        padding: 6px 12px;
+        font-size: 0.875rem;
+      }
+    }
+
+    .filter-cards {
+      gap: 15px;
+
+      .filter-card {
+        width: 280px;
+        gap: 12px;
+        padding: 10px 14px;
+
+        img {
+          width: 40px;
+        }
+
+        .content {
+          gap: 6px;
+
+          h4 {
+            font-size: 0.875rem;
+          }
+
+          p {
+            font-size: 0.75rem;
+            line-height: 1.3;
+          }
+        }
+      }
+    }
+  }
+}
