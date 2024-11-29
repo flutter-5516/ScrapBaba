@@ -83,7 +83,7 @@ const Purchase = () => {
                 <th>Weight (kg)</th>
                 <th>Location</th>
                 <th>Contact Phone</th>
-                <th>Offer Price</th>
+                <th>Offer  Price</th>
               </tr>
             </thead>
             <tbody>
