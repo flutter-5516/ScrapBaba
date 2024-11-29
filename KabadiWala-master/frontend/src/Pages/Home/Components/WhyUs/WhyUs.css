@@ -1,0 +1,130 @@
+/* General Container Styling */
+.why-us-container {
+  padding: 60px 30px;  /* Increased padding for more spacious layout */
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  box-sizing: border-box;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  background: #EFF1F3;  /* Set background color */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);  /* Slightly stronger shadow for depth */
+  min-height: 650px;  /* Increased the minimum height */
+}
+
+/* Title and Description */
+.why-us-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+.why-us-description {
+  font-size: 1.3rem;  /* Increased font size */
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 40px;
+  max-width: 800px;  /* Limit width to avoid overly stretched text */
+  margin-left: auto;
+  margin-right: auto;  /* Center-align text */
+  text-align: center;
+}
+
+/* Features Grid */
+.features-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: nowrap;  /* Prevent wrapping on large screens */
+  padding: 0 20px;
+  overflow-x: auto;  /* Allow horizontal scrolling on smaller screens */
+}
+
+/* Feature Card */
+.feature-card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 25px;  /* Increased padding for more breathing room */
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 220px;
+  max-width: 300px;  /* Max-width for better alignment */
+  flex-grow: 1;
+  margin-bottom: 30px;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);  /* Slightly stronger hover effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Feature Card Icon */
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: #5cb85c;
+}
+
+/* Feature Card Title */
+.feature-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Feature Card Description */
+.feature-description {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .features-grid {
+    flex-wrap: wrap;  /* Allow wrapping on medium screens */
+    justify-content: center; /* Center the items on smaller screens */
+  }
+
+  .feature-card {
+    min-width: 270px;  /* Adjust the width of cards on smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .why-us-title {
+    font-size: 2.2rem;
+  }
+
+  .why-us-description {
+    font-size: 1.1rem;
+  }
+
+  .feature-title {
+    font-size: 1.1rem;
+  }
+
+  .feature-description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .features-grid {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .feature-card {
+    min-height: unset;
+  }
+}

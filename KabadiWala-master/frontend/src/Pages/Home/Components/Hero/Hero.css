@@ -1,0 +1,247 @@
+.button-bar {
+  font-size: 28px;
+  background-color: var(--dark-green);
+  padding: 12px 20px;
+  border-radius: 12px;
+  color: white;
+  transition: 0.2s;
+  cursor: pointer;
+  border: 2px solid var(--dark-green);
+  margin-left: 180px;
+  margin-top: 30px;
+}
+
+.button-bar:hover {
+  background-color: white;
+  color: var(--dark-green);
+  border: 2px solid var(--dark-green);
+}
+
+.hero {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 92vh;
+  gap: 50px; /* Added a gap to ensure spacing between the text and the image */
+}
+
+.text {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.text h4 {
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--dark-green);
+  letter-spacing: 2px;
+}
+
+.text h1 {
+  font-size: 72px;
+  font-weight: 800;
+  line-height: 90px;
+  letter-spacing: 1.2px;
+}
+
+.text h1 span {
+  color: var(--dark-green);
+}
+
+.text p {
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.7px;
+}
+
+.text p span {
+  display: block;
+}
+
+.hero img {
+  width: 500px;
+  height: 500px;
+}
+
+@media (max-width: 1700px) {
+  .hero {
+    .text {
+      gap: 30px;
+      h4 {
+        font-size: 22px;
+        letter-spacing: 1.2px;
+      }
+
+      h1 {
+        font-size: 60px;
+        line-height: 72px;
+        letter-spacing: 1px;
+      }
+
+      p {
+        font-size: 17px;
+        line-height: 24px;
+        letter-spacing: 0.6px;
+      }
+    }
+
+    .button-bar {
+      font-size: 24px;
+      margin-left: 150px;
+      padding: 10px 15px;
+    }
+
+    img {
+      width: 400px;
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .hero {
+    .text {
+      gap: 20px;
+      h4 {
+        font-size: 20px;
+        letter-spacing: 1px;
+      }
+
+      h1 {
+        font-size: 50px;
+        line-height: 60px;
+        letter-spacing: 0.5px;
+      }
+
+      p {
+        font-size: 15px;
+        line-height: 24px;
+        letter-spacing: 0.5px;
+      }
+    }
+
+    .button-bar {
+      font-size: 18px;
+      margin-left: 50px;
+      padding: 8px 12px;
+    }
+
+    img {
+      width: 350px;
+    }
+  }
+}
+
+@media (max-width: 1050px) {
+  .hero {
+    justify-content: center;
+    flex-direction: column-reverse;
+    gap: 80px;
+    .text {
+      align-items: center;
+      gap: 30px;
+      h4 {
+        font-size: 20px;
+        letter-spacing: 1px;
+        text-align: center;
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 52px;
+        line-height: 60px;
+        letter-spacing: 1px;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 25px;
+        letter-spacing: 0.6px;
+        text-align: center;
+      }
+    }
+
+    .button-bar {
+      font-size: 16px;
+      padding: 8px 12px;
+      margin-left: 0;
+      width: 200px; /* Make the button width responsive */
+    }
+
+    img {
+      width: 300px;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .hero {
+    gap: 50px;
+    .text {
+      gap: 25px;
+      h4 {
+        font-size: 18px;
+        letter-spacing: 0.8px;
+      }
+
+      h1 {
+        font-size: 42px;
+        line-height: 50px;
+        letter-spacing: 0.8px;
+      }
+
+      p {
+        font-size: 15px;
+        line-height: 23px;
+        letter-spacing: 0.5px;
+      }
+    }
+
+    .button-bar {
+      font-size: 20px;
+      padding: 10px 15px;
+      width: 180px ; /* Make the button more compact */
+    }
+
+    img {
+      width: 300px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .hero {
+    gap: 30px;
+    .text {
+      gap: 10px;
+      h4 {
+        font-size: 16px;
+        letter-spacing: 0.8px;
+      }
+
+      h1 {
+        font-size: 30px;
+        line-height: 40px;
+        letter-spacing: 0.7px;
+      }
+
+      p {
+        font-size: 14px;
+        line-height: 19px;
+        letter-spacing: 0.4px;
+      }
+    }
+
+    .button-bar {
+      font-size: 17px;
+      padding: 8px 12px;
+      width: 150px; 
+    }
+
+    img {
+      width: 300px;
+    }
+  }
+}
