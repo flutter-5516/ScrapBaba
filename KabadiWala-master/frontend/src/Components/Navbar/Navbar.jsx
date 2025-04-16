@@ -51,7 +51,7 @@ const Navbar = () => {
         <button className="button" onClick={() => handleButton("/purchase")}>
           Purchase Scrap
         </button>
-        <img src={dsdl} alt="DSDL" />
+       
       </div>
 
       <div className="hamburger" onClick={handleMenu}>

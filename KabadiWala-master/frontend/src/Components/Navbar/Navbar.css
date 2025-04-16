@@ -68,7 +68,8 @@ nav {
     display: none;
 
     img {
-      width: 25px;
+      width: 35px; /* Increased width of hamburger icon */
+      height: 25px; /* Adjust height proportionally */
       cursor: pointer;
       transition: transform 0.3s ease;
     }
@@ -98,7 +99,7 @@ nav {
       gap: 25px;
 
       a {
-        font-size: 16px;
+        font-size: 20px;
         padding: 0 8px;
       }
     }
@@ -112,14 +113,16 @@ nav {
 
     .logo {
       a {
-        gap: 3px;
+        margin-top: 5px;
+        gap: 5px;
 
         img {
-          width: 75px;
+          width: 60px; /* Slightly smaller logo on mobile */
+          margin-top: 15px;
         }
 
         h3 {
-          font-size: 15px;
+          font-size: 22px; /* Adjust font size for mobile */
         }
       }
     }
@@ -137,6 +140,7 @@ nav {
       flex-direction: column;
       z-index: 9999;
       background-color: var(--light-grey);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow to make the menu stand out */
     }
 
     .menu.active {
@@ -145,6 +149,17 @@ nav {
 
     .hamburger {
       display: block;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+      z-index: 10000; /* Ensure hamburger is above everything */
+    }
+
+    .hamburger img {
+      width: 40px; /* Increased size of hamburger icon */
+      height: 30px; /* Adjust height accordingly */
+      transition: transform 0.3s ease;
     }
   }
 }
@@ -156,29 +171,31 @@ nav {
 
     .logo {
       a {
-        gap: 2px;
-
+        gap: 5px;
         img {
-          width: 75px;
+          width: 50px;
+          margin-top: 15px;  /* Smaller logo on smaller screens */
         }
 
         h3 {
-          margin-left: 10px;
           font-size: 20px;
         }
       }
     }
 
     .menu {
-      gap: 20px;
+      gap: 30px; /* Increased gap for better spacing */
+      text-align: center;
 
       a {
-        font-size: 14px;
+        font-size: 22px; /* Increase font size for better readability */
+        padding: 15px 0; /* Add more padding for touch targets */
       }
     }
 
     .hamburger img {
-      width: 20px;
+      width: 35px; /* Hamburger icon size adjusted */
+      height: 25px;
     }
   }
 }
@@ -191,25 +208,31 @@ nav {
       a {
         img {
           width: 75px;
+          margin-top: 15px; 
+         /* Smaller logo */
         }
 
         h3 {
-          margin-left: 10px;
-          font-size: 20px;
+          font-size: 18px;
+          margin-left: 5px; /* Adjust logo text margin */
         }
       }
     }
 
     .menu {
-      gap: 15px;
-
+      gap: 20px;
+      flex-direction: column; /* Stack items vertically */
+      
       a {
-        font-size: 12px;
+        font-size: 18px; /* Smaller font size for tighter screens */
+        padding: 10px 0; 
+        /* Adjust padding for better touch target */
       }
     }
 
     .hamburger img {
-      width: 18px;
+      width: 40px; /* Increased hamburger icon width */
+      height: 30px;
     }
   }
 }
