@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { PostDataContext } from "../../Store/Sell-Data"; 
+import { PostDataContext } from "../../Store/Sell-Data";
+import { auth } from "../../Firebase/Firebase";
 import "./Sell.css";
 
 const materialOptions = [
@@ -17,21 +18,28 @@ const Sell = () => {
   const [location, setLocation] = useState("");
   const [phoneNo, setPhoneNo] = useState("");
   const [offerPrice, setOfferPrice] = useState("");
-  const [errorMessage, setErrorMessage] = useState(""); 
-  const [successMessage, setSuccessMessage] = useState(""); 
-  const[name,setName]=useState("");
+  const [errorMessage, setErrorMessage] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
+  const [name, setName] = useState("");
 
-  const navigate = useNavigate(); 
-  const { addData } = useContext(PostDataContext); 
+  const navigate = useNavigate();
+  const { addData } = useContext(PostDataContext);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
-    if (!selectedMaterial || !weight || !location || !phoneNo || !offerPrice||!name) {
+
+    if (
+      !selectedMaterial ||
+      !weight ||
+      !location ||
+      !phoneNo ||
+      !offerPrice ||
+      !name
+    ) {
       setErrorMessage("Please fill in all fields.");
       return;
     }
-  
+
     const postData = {
       name: name,
       phone: phoneNo,
@@ -41,19 +49,21 @@ const Sell = () => {
       location: location,
       pricePerKg: offerPrice,
     };
-  
+
     try {
-      const response = await fetch("https://scrap-baba-api.vercel.app/scrap", {
+      const token = await auth.currentUser.getIdToken();
+      const response = await fetch("http://localhost:3000/scrap", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
         },
         body: JSON.stringify(postData),
       });
-  
+
       const resObj = await response.json();
-      console.log("API Response:", resObj); 
-  
+      console.log("API Response:", resObj);
+
       if (resObj.result && resObj.result.success) {
         addData(resObj);
         console.log(resObj);
@@ -69,7 +79,6 @@ const Sell = () => {
       setErrorMessage("Something went wrong. Please try again.");
     }
   };
-  
 
   return (
     <div className="sell-page">
@@ -77,7 +86,9 @@ const Sell = () => {
         <h1>Sell Your Waste</h1>
 
         {/* Display success or error message */}
-        {successMessage && <div className="success-message">{successMessage}</div>}
+        {successMessage && (
+          <div className="success-message">{successMessage}</div>
+        )}
         {errorMessage && <div className="error-message">{errorMessage}</div>}
 
         <form onSubmit={handleSubmit} className="sell-form">
@@ -91,9 +102,8 @@ const Sell = () => {
               onChange={(e) => setName(e.target.value)}
               placeholder="Eg.John Doe"
               required
-            /> 
+            />
           </div>
-
 
           <div className="form-group">
             <label htmlFor="material">Type of Waste Material</label>

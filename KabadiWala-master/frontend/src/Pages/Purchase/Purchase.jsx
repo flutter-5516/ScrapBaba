@@ -15,7 +15,7 @@ const Purchase = () => {
 
     try {
       const response = await fetch(
-        `https://scrap-baba-api.vercel.app/scrap/get`,
+        `http://localhost:3000/scrap/get`,
         {
           method: "POST",
           headers: {
